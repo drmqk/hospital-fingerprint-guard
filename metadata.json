@@ -1,0 +1,6 @@
+{
+  "name": "Hospital Duty & Fingerprint Alarm Guard",
+  "description": "Hospital shift schedule manager, automated fingerprint clock-in/out reminders, duty alarms, and Google Calendar sync.",
+  "requestFramePermissions": ["notifications"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

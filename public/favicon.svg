@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="redRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f87171" />
+      <stop offset="100%" stop-color="#dc2626" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="128" height="128" rx="28" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Outer Biometric Pulse Ring -->
+  <circle cx="64" cy="64" r="50" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="6 4" />
+
+  <!-- Biometric Fingerprint Ridges -->
+  <path d="M64 22 C41 22 23 40 23 63 C23 74 27 84 34 91" fill="none" stroke="url(#cyanBlue)" stroke-width="4" stroke-linecap="round" filter="url(#glow)" />
+  <path d="M105 63 C105 40 87 22 64 22" fill="none" stroke="url(#cyanBlue)" stroke-width="4" stroke-linecap="round" />
+  
+  <path d="M64 34 C48 34 35 47 35 63 C35 72 38 80 43 86" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M93 63 C93 47 80 34 64 34" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" />
+
+  <path d="M64 46 C55 46 47 54 47 63 C47 70 50 76 54 81" fill="none" stroke="#7dd3fc" stroke-width="3" stroke-linecap="round" />
+  <path d="M81 63 C81 54 73 46 64 46" fill="none" stroke="#7dd3fc" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Central Core Fingerprint Loop -->
+  <path d="M64 56 C60 56 57 59 57 63 C57 73 64 77 64 86" fill="none" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round" />
+  <path d="M71 63 C71 59 68 56 64 56" fill="none" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Hospital Cross Badge (Upper Left) -->
+  <g transform="translate(18, 18)">
+    <rect width="18" height="18" rx="5" fill="#0f172a" stroke="#059669" stroke-width="1.5" />
+    <path d="M9 4 v10 M4 9 h10" stroke="url(#emeraldGrad)" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Alarm Bell Alert Badge (Upper Right) -->
+  <g transform="translate(88, 16)">
+    <circle cx="12" cy="12" r="12" fill="url(#redRose)" filter="url(#glow)" />
+    <!-- Bell icon -->
+    <path d="M12 6 C10.3 6 9 7.3 9 9 v2.5 L7.5 13 h9 L15 11.5 V9 C15 7.3 13.7 6 12 6 Z" fill="#ffffff" />
+    <circle cx="12" cy="15" r="1.2" fill="#ffffff" />
+  </g>
+
+  <!-- Live Pulse Dot (Bottom Right) -->
+  <circle cx="96" cy="96" r="4" fill="#34d399" filter="url(#glow)">
+    <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>
